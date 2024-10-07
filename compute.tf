@@ -33,6 +33,7 @@ resource "aws_instance" "sample_ec2_variables" {
 #Create EC2 instances with module
 module "ec2_instance" {
   source = "terraform-aws-modules/ec2-instance/aws"
+  version = "~> 5.7"
 
   name = "ce7-TanYuan-tf-node-app"
 
@@ -41,7 +42,7 @@ module "ec2_instance" {
   # key_name                    = aws_key_pair.TanYuan-tf-ec2-key.key_name
   key_name               = var.key_name
   monitoring             = true
-  vpc_security_group_ids = ["${aws_security_group.ty-sg.id}"]
+  vpc_security_group_ids = [(aws_security_group.ty-sg.id)]
   subnet_id              = module.vpc.public_subnets.id[1]
   # associate_public_ip_address = true
 
