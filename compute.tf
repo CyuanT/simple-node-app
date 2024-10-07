@@ -46,6 +46,8 @@ module "ec2_instance" {
   subnet_id              = module.vpc.public_subnets[1]
   # associate_public_ip_address = true
 
+  user_data = file("${path.module}/install.sh")
+
   tags = {
     Terraform   = "true"
     Environment = "dev"
