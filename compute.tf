@@ -43,7 +43,7 @@ module "ec2_instance" {
   key_name               = var.key_name
   monitoring             = true
   vpc_security_group_ids = [(aws_security_group.ty-sg.id)]
-  subnet_id              = module.vpc.public_subnets.id[1]
+  subnet_id              = module.vpc.public_subnets[1]
   # associate_public_ip_address = true
 
   tags = {
