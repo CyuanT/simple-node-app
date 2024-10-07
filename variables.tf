@@ -86,11 +86,11 @@ variable "vpc_config" {
   }
 }
 
-# variable "ami_id" {
-#   description = "EC2 ami id"
-#   type        = string
-#   default     = "ami-0ebfd941bbafe70c6"
-# }
+variable "ami_id" {
+  description = "EC2 ami id"
+  type        = string
+  default     = "ami-0ebfd941bbafe70c6"
+}
 
 variable "def_tags" {
   description = "default tags"
