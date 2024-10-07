@@ -31,7 +31,7 @@ jobs:
 
    - name: Terraform Validate
      id: validate
-     run: terraform validate -no-color
+     run: terraform validate -no-color -backend=false
 
    - uses: terraform-linters/setup-tflint@v3
      with:
