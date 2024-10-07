@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
   res.send(msg);
 });
 
-app.get('/test', (req, res) => {
+app.get('/seeka', (req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello from /test Node!';
+  const msg = 'Hello from /seeka Node!';
   res.send(msg);
 });
 

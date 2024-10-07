@@ -8,15 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luqmannnn/simple-node-application.git"
+    "url": "git+https://github.com/CyuanT/simple-node-app.git"
   },
-  "author": "luqman",
+  "author": "CyuanT",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luqmannnn/simple-node-application/issues"
+    "url": "https://github.com/CyuanT/simple-node-app/issues"
   },
-  "homepage": "https://github.com/luqmannnn/simple-node-application#readme",
+  "homepage": "https://github.com/CyuanT/simple-node-app.git#readme",
   "dependencies": {
     "express": "^4.21.0"
-  }
+  },
+  "keywords": [
+    "my",
+    "simple",
+    "node"
+  ],
+  "devDependencies": {}
 }
