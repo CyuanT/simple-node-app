@@ -32,7 +32,7 @@ resource "aws_instance" "sample_ec2_variables" {
 
 #Create EC2 instances with module
 module "ec2_instance" {
-  source = "terraform-aws-modules/ec2-instance/aws"
+  source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 5.7"
 
   name = "ce7-TanYuan-tf-node-app"
