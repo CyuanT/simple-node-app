@@ -22,6 +22,8 @@ jobs:
 
    - name: Setup Terraform
      uses: hashicorp/setup-terraform@v3
+     with:
+      terraform_wrapper: false
 
    - name: Terraform Init
      run: terraform init
@@ -33,6 +35,14 @@ jobs:
      id: tfout
      run: |
        terraform output
+
+  #  - name: Get EC2 IP and username
+  #    id: 
+
+  #  - name: Access EC2 from runner
+  #    uses: actions/checkout@v3
+  #    env:
+  #      private-key: ${{ secrets.NIU_TY_USEAST1_20240713 }}
 
    - name: Wait for 15min
      run: sleep 900
