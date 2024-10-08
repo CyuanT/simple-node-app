@@ -34,12 +34,12 @@ jobs:
    - name: Export terraform outputs
      id: tfout
      run: |
-      #  terraform output
-       echo $(terraform output) >> $GITHUB_ENV
-       echo ${{ env.instance_ip_addr }}
+       terraform output
+       ec2_ip = $( terraform output | jq '.ec2_ip' )
+       echo "ec2_ip=$ec2_ip" >> "$GITHUB_ENV"
 
-  #  - name: Get EC2 IP and username
-  #    id: 
+   - name: Get EC2 IP and username
+     run: echo "ec2_ip"
 
   #  - name: Access EC2 from runner
   #    uses: actions/checkout@v3
