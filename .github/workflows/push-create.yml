@@ -38,7 +38,8 @@ jobs:
        echo '{'$(terraform output | awk '{print $1}')' : '$(terraform output | awk '{print $3}')'}'
        key=\"$(terraform output | awk '{print $1}')\"
        value=\"$(terraform output | awk '{print $3}')\"
-       echo \" '{' '$key' : '$value' '}' \" | jq
+       echo "okay"
+       echo -e '{ '$key' : '$value' }' | jq
       #  terraform output > ~/ec2_ip.json
       #  sed -i 's/\=/\:/g' ~/ec2_ip.json
 
