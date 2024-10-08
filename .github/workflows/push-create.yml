@@ -42,7 +42,8 @@ jobs:
    - name: Get EC2 IP and username
      run: |
        cat ~/ec2_ip.json
-       jq '.instance_ip_addr' ~/ec2_ip.json
+       jq -v
+       jq -r '.instance_ip_addr' ~/ec2_ip.json
 
   #  - name: Access EC2 from runner
   #    uses: actions/checkout@v3
