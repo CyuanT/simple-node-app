@@ -35,8 +35,7 @@ jobs:
      id: tfout
      run: |
        terraform output
-       touch ~/ec2_ip.txt
-       echo terraform output > ~/ec2_ip.txt
+       terraform output > ~/ec2_ip.txt
 
    - name: Get EC2 IP and username
      run: |
