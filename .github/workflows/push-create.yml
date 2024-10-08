@@ -40,7 +40,7 @@ jobs:
 
    - name: Get EC2 IP and username
      run: |
-       echo "cat ~/ec2_ip.txt"
+       cat ~/ec2_ip.txt
 
   #  - name: Access EC2 from runner
   #    uses: actions/checkout@v3
