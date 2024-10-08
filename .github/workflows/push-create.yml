@@ -35,6 +35,8 @@ jobs:
      id: tfout
      run: |
        terraform output
+       echo $(terraform output) >> $GITHUB_ENV
+       echo ${{ env.instance_ip_addr }}
 
   #  - name: Get EC2 IP and username
   #    id: 
