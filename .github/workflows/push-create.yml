@@ -41,7 +41,7 @@ jobs:
        echo "okay"
        echo $key
        echo $value
-       echo -e \"{ $key : $value }\" | jq
+       echo -e \"{ $key : $value }\" | jq -r .instance_ip_addr
       #  terraform output > ~/ec2_ip.json
       #  sed -i 's/\=/\:/g' ~/ec2_ip.json
 
