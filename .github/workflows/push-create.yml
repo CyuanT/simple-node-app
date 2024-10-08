@@ -35,7 +35,8 @@ jobs:
      id: tfout
      run: |
        terraform output
-       terraform output | sed -i 's/\=/\:/g' > ~/ec2_ip.json
+       terraform output > ~/ec2_ip.json
+       sed -i 's/\=/\:/g' ~/ec2_ip.json
 
    - name: Get EC2 IP and username
      run: |
