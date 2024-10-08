@@ -34,7 +34,7 @@ jobs:
    - name: Export terraform outputs
      id: tfout
      run: |
-       terraform output
+      #  terraform output
        echo $(terraform output) >> $GITHUB_ENV
        echo ${{ env.instance_ip_addr }}
 
@@ -46,8 +46,8 @@ jobs:
   #    env:
   #      private-key: ${{ secrets.NIU_TY_USEAST1_20240713 }}
 
-   - name: Wait for 3min
-     run: sleep 180
+   - name: Wait for 90 seconds
+     run: sleep 90
 
    - name: Terraform Destroy
      run: terraform destroy -no-color -auto-approve
