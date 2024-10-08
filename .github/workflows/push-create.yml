@@ -35,8 +35,8 @@ jobs:
      id: tfout
      run: |
        terraform output
-       echo '{"$(terraform output | awk '{print $1}'" : "$(terraform output | awk '{print $3}'"}'
-       terraform output > ~/ec2_ip.json
+       echo '{"$(terraform output | awk '{print $1}'" : "$(terraform output | awk '{print $3}'"}' > ~/ec2_ip.json
+      #  terraform output > ~/ec2_ip.json
       #  sed -i 's/\=/\:/g' ~/ec2_ip.json
 
    - name: Get EC2 IP and username
