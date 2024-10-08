@@ -35,11 +35,12 @@ jobs:
      id: tfout
      run: |
        terraform output
-       ec2_ip = $( terraform output | jq '.ec2_ip' )
-       echo "ec2_ip=$ec2_ip" >> "$GITHUB_ENV"
+       touch ~/ec2_ip.txt
+       echo "terraform output" > ~/ec2_ip.txt
 
    - name: Get EC2 IP and username
-     run: echo "$ec2_ip"
+     run: |
+       echo "cat ~/ec2_ip.txt"
 
   #  - name: Access EC2 from runner
   #    uses: actions/checkout@v3
