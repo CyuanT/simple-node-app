@@ -41,7 +41,7 @@ jobs:
        echo "okay"
        echo $key
        echo $value
-       ec2_info=$( jq -n --arg k "$key" --arg v "$value" '{$k: $v}' )
+       ec2_info=$( jq -n --arg k "$key" --arg v "$value" '{"ip": $v}' )
        echo $ec2_info
       #  echo -e \"{ $key : $value }\" | jq -r .instance_ip_addr
       #  terraform output > ~/ec2_ip.json
