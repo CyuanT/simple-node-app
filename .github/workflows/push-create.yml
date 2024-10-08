@@ -36,7 +36,7 @@ jobs:
      run: |
        terraform output
        echo '{'$(terraform output | awk '{print $1}')' : '$(terraform output | awk '{print $3}')'}'
-       echo \"'{'$(terraform output | awk '{print $1}')' : '$(terraform output | awk '{print $3}')'}'\" | jq
+       echo \"'{$(terraform output | awk '{print $1}') : $(terraform output | awk '{print $3}')}'\" | jq
       #  terraform output > ~/ec2_ip.json
       #  sed -i 's/\=/\:/g' ~/ec2_ip.json
 
