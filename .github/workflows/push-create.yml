@@ -35,6 +35,7 @@ jobs:
      id: tfout
      run: |
        terraform output
+        echo '{\"${terraform output | awk '{print $1}'}\" : \"${terraform output | awk '{print $3}'}\"}'
        echo '{\"${terraform output | awk '{print $1}'}\" : \"${terraform output | awk '{print $3}'}\"}' | jq '.instance_ip_addr'
       #  terraform output > ~/ec2_ip.json
       #  sed -i 's/\=/\:/g' ~/ec2_ip.json
