@@ -60,8 +60,8 @@ jobs:
   #    env:
   #      private-key: ${{ secrets.NIU_TY_USEAST1_20240713 }}
 
-   - name: Wait for 90 seconds
-     run: sleep 90
+   - name: Wait for 120 seconds
+     run: sleep 120
 
    - name: Terraform Destroy
      run: terraform destroy -no-color -auto-approve
