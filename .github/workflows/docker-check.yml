@@ -1,9 +1,9 @@
-name: build
+name: Docker image push
 on:
   push:
 
 jobs:
- Terraform-Create-And-Destroy:
+ Docker-Image-Push:
    runs-on: ubuntu-latest
    steps:
    - name: Checkout
